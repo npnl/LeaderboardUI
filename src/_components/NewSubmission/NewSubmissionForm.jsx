@@ -13,7 +13,7 @@ class NewSubmissionForm extends React.Component {
       <div>
         <Header/>
         <div className="center">
-          <h1>Hello</h1>
+          <h1>TODO: Add a new form here for making a new submission.</h1>
 
         </div>
       </div>
