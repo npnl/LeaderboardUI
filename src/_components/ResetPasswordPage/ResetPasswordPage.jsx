@@ -73,7 +73,7 @@ class ResetPasswordPage extends React.Component {
                     }
                   </div>
                   <div className="form-group">
-                      <button className="btn btn-primary">Reset Password</button>
+                      <button className="btn btn-primary">Reset Password</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     {waiting &&
                     <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                     }
@@ -83,15 +83,15 @@ class ResetPasswordPage extends React.Component {
         );
 
         var mail_sent_screen = (
-          <div className="col-md-3 center">
+          <div className="center-form">
             <h2>Password email sent successfully to your email account</h2>
           {flashMessages.message && <span className={""+flashMessages.type}>{flashMessages.message !== undefined ? (flashMessages.type === 'alert-success' ? 'Success : ' + flashMessages.message : 'Failure : ' + flashMessages.message) : ''}</span>}
           <br/><br/><br/>
-              <p>Open your email and click on the reset link to reset your account password for SCORE Assessment Portal.</p>
+              <p>Open your email and click on the reset link to reset your account password for NPNL Leaderboard.</p>
               <Link to="/login" className="btn btn-link">Login</Link>
           </div>);
 
-        var update_screen = (<div className="col-md-6 col-md-offset-3">
+        var update_screen = (<div className="center-form">
             <h2>Forgot Password</h2>
           {flashMessages.message && <span className={""+flashMessages.type}>{flashMessages.message !== undefined ? (flashMessages.type === 'alert-success' ? 'Success : ' + flashMessages.message : 'Failure : ' + flashMessages.message) : ''}</span>}
             <form name="form" onSubmit={this.handleSubmit}>
@@ -103,17 +103,17 @@ class ResetPasswordPage extends React.Component {
                   }
                 </div>
                 <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password">New Password</label>
                     <input type="password" className="form-control" name="password" value={user.password} onChange={this.handleChange} />
                   {submitted && !user.password &&
-                  <div className="help-block">Password is required</div>
+                  <div className="help-block">New Password is required</div>
                   }
                 </div>
                 <div className={'form-group' + (submitted && !user.password_confirmation ? ' has-error' : '')}>
-                    <label htmlFor="password_confirmation">Password Confirmation</label>
+                    <label htmlFor="password_confirmation">New Password Confirmation</label>
                     <input type="password" className="form-control" name="password_confirmation" value={user.password_confirmation} onChange={this.handleChange} />
                   {submitted && !user.password_confirmation &&
-                  <div className="help-block">Password Confirmation is required</div>
+                  <div className="help-block">New Password Confirmation is required</div>
                   }
                 </div>
                 <div className="form-group">

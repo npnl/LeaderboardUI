@@ -41,6 +41,16 @@ export function users(state = {}, action) {
         ...state,
         reset_mail_sent: false
       };
+    case userConstants.NEW_SUBMISSION_SUCCESS:
+      return {
+        ...state,
+        submission_success: true
+      };
+    case userConstants.NEW_SUBMISSION_FAILURE:
+      return {
+        ...state,
+        submission_success: false
+      };
     case userConstants.DELETE_FAILURE:
       // remove 'deleting:true' property and add 'deleteError:[error]' property to user 
       return {

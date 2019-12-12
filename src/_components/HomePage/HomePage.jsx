@@ -1,31 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Header } from '../common/Header'
 import { LeaderboardPage } from '../LeaderboardPage'
+import { WelcomePage } from '../common/WelcomePage'
+import { Footer } from '../common/Footer'
+import { MiscContent } from '../common/MiscContent'
 
 class HomePage extends React.Component {
-    componentDidMount() {
-        // this.props.dispatch(userActions.getAll());
-    }
 
     render() {
-        const { user, users } = this.props;
         return (
           <div>
-              <Header/>
+              <WelcomePage />
               <LeaderboardPage/>
+              <MiscContent />
+              <Footer />
           </div>
         );
     }
 }
 
 function mapStateToProps(state) {
-    const { users, authentication } = state;
-    const { user } = authentication;
-    return {
-        user,
-        users
-    };
+    return {};
 }
 
 const connectedHomePage = connect(mapStateToProps)(HomePage);

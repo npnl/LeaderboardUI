@@ -1,6 +1,6 @@
 import { userConstants } from '../_constants';
 
-let access_token = localStorage.getItem('access_token');
+let access_token = localStorage.getItem('access_token_leaderboard');
 let current_user = JSON.parse(localStorage.getItem('current_user'));
 const initialState = access_token ? { loggedIn: true, access_token, current_user } : {};
 

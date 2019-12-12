@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 /*table {*/
@@ -18,36 +18,27 @@ body {
 
 .main-container {
     /*display: flex;*/
-    padding-top: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
+}
+
+.custom-alert {
+    top: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 120;
 }
 
 @media (min-width: 641px) {
     .basic-info {
         margin-bottom: 17%;
     }
-
-    .custom-alert {
-        top: 70px;
-        position: fixed;
-        width: 100%;
-        z-index: 120;
-    }
 }
 
 @media (min-width: 1281px) {
     .basic-info {
         margin-bottom: 8%;
-    }
-
-    .custom-alert {
-        top: 70px;
-        position: fixed;
-        width: 100%;
-        z-index: 120;
     }
 }
 
@@ -80,4 +71,60 @@ mark.red {
 .center-form {
     width: 40%;
     margin: 0 auto;
+    margin-top: 120px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("images/collage_final_2.png");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+}
+
+#container {
+    position: absolute;
+    top: 42%;
+    margin-top: -150px;
+    left: 0;
+    width: 100%;
+}
+
+#content {
+    width: 100%;
+    max-width: 550px;
+    padding: 20px;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(208,208,208,.77);
+}
+
+.title-heading {
+    color: #252525;
+    padding-bottom: 12px;
+}
+
+.title-desc {
+    color: #005d6f;
+}
+
+#content h1 span {
+    color: #368ca2;
+    border-bottom: 2px solid #005d6f;
+    padding-bottom: 12px;
+    line-height: 3;
+    font-size: 30px;
+}
+
+#sticky-footer {
+    margin-top: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #333333;
+    color: #FFFFFF;
 }

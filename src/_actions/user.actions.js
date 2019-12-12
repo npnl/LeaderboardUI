@@ -11,8 +11,34 @@ export const userActions = {
     reset_password,
     request_password_update,
     resetPasswordStepZero,
+    makeSubmission,
     delete: _delete
 };
+
+
+function makeSubmission(submission) {
+  return dispatch => {
+    // dispatch(request(credentials['session']['email']));
+
+    userService.makeSubmission(submission)
+      .then(
+        response => {
+          dispatch(success(response));
+          dispatch(flashMessagesActions.success("Successfully submitted your response"));
+          // history.push(`/${serverConstants.UI_RELATIVE_PATH}/Home`);
+          // window.location.reload();
+        },
+        error => {
+          dispatch(failure(error.toString()));
+          dispatch(flashMessagesActions.error(error.toString()));
+        }
+      );
+  };
+
+  function request(data) { return { type: userConstants.NEW_SUBMISSION_REQUEST, data } }
+  function success(response) { return { type: userConstants.NEW_SUBMISSION_SUCCESS, response } }
+  function failure(error) { return { type: userConstants.NEW_SUBMISSION_FAILURE, error } }
+}
 
 function reset_password(user, reset_token) {
   return dispatch => {

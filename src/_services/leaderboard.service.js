@@ -1,4 +1,3 @@
-import { authHeader } from '../_helpers';
 import { serverConstants } from '../_constants'
 import { userService } from './user.service'
 
@@ -8,8 +7,7 @@ export const leaderboardService = {
 
 function getLeaderboard() {
     const requestOptions = {
-        method: 'GET',
-        headers: authHeader()
+        method: 'GET'
     };
 
     return fetch(`${serverConstants.BASE_URL}/leaderboard`, requestOptions).then(handleResponse);
