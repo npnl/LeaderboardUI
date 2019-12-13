@@ -1,7 +1,5 @@
 export const serverConstants = {
-  // BASE_URL: 'http://54.153.47.191:80', // Integration West Zone
-  // BASE_URL: 'http://ec2-18-209-109-171.compute-1.amazonaws.com:80', // Production: East zone
-  BASE_URL: 'http://localhost:5000',
+  BASE_URL: 'http://atlas.us-east-1.elasticbeanstalk.com',
 
   UI_RELATIVE_PATH: '',
 

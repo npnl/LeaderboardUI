@@ -42,7 +42,7 @@ class NewSubmissionForm extends React.Component {
         <form name="form" onSubmit={this.handleSubmit}>
           <div className={'form-group'}>
             <label htmlFor="score">Score</label>
-            <input type="number" className="form-control" name="score" value={score} min="0" max="100" onChange={this.handleChange} />
+            <input type="number" className="form-control" name="score" step='0.01' placeholder="0.00" value={score} min="0" max="100" onChange={this.handleChange} />
           </div>
 
           <div className="form-group">
