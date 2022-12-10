@@ -34,7 +34,7 @@
     "gulp-react": "^3.1.0",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^3.0.1",
-    "react-router": "^0.13.3",
+    "react-router": "^6.4.5",
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.0"
